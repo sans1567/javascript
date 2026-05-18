@@ -7,6 +7,8 @@ console.log(hambragerBtn,headerMenu,closeBtn);
 function hambrgerActive() {
     hambragerBtn.classList.toggle('is-active');
     headerMenu.classList.toggle('is-show');
+
+    const open = hambragerBtn.getAttribute('aria-true');
 };
 
 function headerMenuClose() {
