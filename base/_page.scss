@@ -1,0 +1,6 @@
+@use "../variables/variables" as *;
+@use "../variables/mixin" as *;
+
+p {
+    color: $color;
+}
