@@ -8,12 +8,26 @@ function hambrgerActive() {
     hambragerBtn.classList.toggle('is-active');
     headerMenu.classList.toggle('is-show');
 
-    const open = hambragerBtn.getAttribute('aria-true');
+    if(hambragerBtn.classList.contains('is-active') && headerMenu.classList.contains('is-show')) {
+        hambragerBtn.setAttribute('aria-expanded', 'true');
+        headerMenu.setAttribute('aria-hidden', 'false');
+    } else {
+        hambragerBtn.setAttribute('aria-expanded', 'false');
+        headerMenu.setAttribute('aria-hidden', 'true');
+    }
 };
 
 function headerMenuClose() {
     hambragerBtn.classList.remove('is-active');
     headerMenu.classList.remove('is-show');
+
+    if(!hambragerBtn.classList.contains('is-active') && !headerMenu.classList.contains('is-show')) {
+        hambragerBtn.setAttribute('aria-expanded', 'false');
+        headerMenu.setAttribute('aria-hidden', 'true');
+    } else {
+        hambragerBtn.setAttribute('aria-expanded', 'ture');
+        headerMenu.setAttribute('aria-hidden', 'false');
+    }
 };
 
 hambragerBtn.addEventListener('click', () => {
