@@ -2,7 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <meta name="viewpost" contetn="width=device-width, instal-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>area</title>
         <link rel="stylesheet" href="./style.css">
         <script src="./script.js" defer></script>
@@ -11,19 +11,25 @@
         <header class="header">
             <div class="header__inner">
                 <h1 class="header__logo">kadai9</h1>
-                <nav class="header__nav">
+                <nav id="nav" class="header__nav">
                     <ul>
                         <li><a href="#">リンク①</a></li>
                         <li><a href="#">リンク②</a></li>
                         <li><a href="#">リンク③</a></li>
                     </ul>
                 </nav>
-                <button class="hambrager-btn" type="button">
+                <button 
+                    class="hambrager-btn" 
+                    type="button"
+                    aria-controls="nav"
+                    aria-expanded="false"
+                    aria-label="メニューを開くボタン"
+                >
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <div class="header__menu">
+                <div class="header__menu" aria-hidden="true">
                     <ul>
                         <li><a href="#">リンク①</a></li>
                         <li><a href="#">リンク②</a></li>
